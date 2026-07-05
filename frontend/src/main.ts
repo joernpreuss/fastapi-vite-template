@@ -38,6 +38,7 @@ function render(app: HTMLElement): void {
     <main class="window">
       <header class="window-header">
         <span class="status">
+          Backend
           <span id="status-dot" class="status-dot"></span>
           <span id="status-label">checking…</span>
         </span>
