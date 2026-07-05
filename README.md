@@ -11,11 +11,9 @@ A minimal, production-minded full-stack template: **FastAPI** backend, **Vite + 
 - **CI/CD:** GitHub Actions — lint, type-check, test, and build on every push.
 - **Workflow:** trunk-based with feature branches and pull requests; tests first.
 
-## Example app: 3D rotatable map (MapLibre + OSM)
+## Live demo
 
-The template ships with a small example app: a 3D map of Cologne with extruded buildings, rendered with [MapLibre GL JS](https://maplibre.org/) on [OpenFreeMap](https://openfreemap.org/) vector tiles (no API key required). Drag to pan, right-drag or Ctrl-drag to rotate and tilt.
-
-Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors (ODbL). Tiles by [OpenFreeMap](https://openfreemap.org/).
+The frontend is deployed to GitHub Pages on every push to `main`: [joernpreuss.github.io/fastapi-vite-template](https://joernpreuss.github.io/fastapi-vite-template/)
 
 ## Getting started
 
