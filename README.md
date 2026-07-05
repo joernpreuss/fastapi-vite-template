@@ -1,5 +1,7 @@
 # fastapi-vite-template
 
+[![CI](https://github.com/joernpreuss/fastapi-vite-template/actions/workflows/ci.yml/badge.svg)](https://github.com/joernpreuss/fastapi-vite-template/actions/workflows/ci.yml)
+
 A minimal, production-minded full-stack template: **FastAPI** backend, **Vite + TypeScript** frontend, CI/CD via GitHub Actions, test-driven development, and a one-command start on macOS, Linux, and Windows.
 
 ## What's inside
