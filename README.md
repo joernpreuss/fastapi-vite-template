@@ -17,7 +17,32 @@ The frontend is deployed to GitHub Pages on every push to `main`: [joernpreuss.g
 
 ## Getting started
 
-*Setup instructions follow as the template grows — the goal is a single command per platform.*
+Prerequisites: [uv](https://docs.astral.sh/uv/) and [Node.js](https://nodejs.org/) 22+ — both install without admin rights.
+
+One command builds the frontend and serves the app at <http://localhost:8000>:
+
+```sh
+./run.sh        # macOS / Linux
+run.bat         # Windows
+```
+
+### Development mode
+
+Run backend and frontend separately for hot reload:
+
+```sh
+cd backend && uv run uvicorn app.main:app --reload   # API on :8000
+cd frontend && npm run dev                           # UI on :5173, proxies /api
+```
+
+### Tests and checks
+
+```sh
+cd backend && uv run pytest && uv run ruff check && uv run mypy .
+cd frontend && npm test && npm run build
+```
+
+Both suites run in CI on every push and pull request.
 
 ## License
 
