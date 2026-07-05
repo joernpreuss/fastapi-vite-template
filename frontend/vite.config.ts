@@ -4,4 +4,9 @@ import { defineConfig } from "vite";
 // subpath (e.g. GitHub Pages project sites).
 export default defineConfig({
   base: "./",
+  server: {
+    proxy: {
+      "/api": "http://localhost:8000",
+    },
+  },
 });
