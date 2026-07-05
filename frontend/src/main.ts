@@ -35,23 +35,26 @@ function render(app: HTMLElement): void {
   const choice = storedThemeChoice();
 
   app.innerHTML = `
-    <main>
-      <h1>fastapi-vite-template</h1>
-      <p>FastAPI backend · Vite + TypeScript frontend</p>
-      <p>
-        Backend:
-        <span id="status-dot" class="status-dot"></span>
-        <span id="status-label">checking…</span>
-      </p>
-      <label>
-        Theme
-        <select id="theme-select">
-          ${THEME_CHOICES.map(
-            (c) =>
-              `<option value="${c}"${c === choice ? " selected" : ""}>${c}</option>`,
-          ).join("")}
-        </select>
-      </label>
+    <main class="window">
+      <header class="window-header">
+        <span class="status">
+          <span id="status-dot" class="status-dot"></span>
+          <span id="status-label">checking…</span>
+        </span>
+        <label class="theme">
+          Theme
+          <select id="theme-select">
+            ${THEME_CHOICES.map(
+              (c) =>
+                `<option value="${c}"${c === choice ? " selected" : ""}>${c}</option>`,
+            ).join("")}
+          </select>
+        </label>
+      </header>
+      <div class="window-body">
+        <h1>fastapi-vite-template</h1>
+        <p>FastAPI backend · Vite + TypeScript frontend</p>
+      </div>
     </main>
   `;
 
